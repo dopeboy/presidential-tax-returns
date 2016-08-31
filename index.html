@@ -15,26 +15,41 @@
         <title>Presidential Tax Returns</title>
 
         <style type="text/css">
-body {
-    background-color: #FFFFFF;
-}
-  .ui.menu .item img.logo {
-      margin-right: 1.5em;
-  }
-  .main.container {
-      margin-top: 7em;
-  }
-  .wireframe {
-      margin-top: 2em;
-  }
-  .ui.footer.segment {
-      margin: 5em 0em 0em;
-      padding: 5em 0em;
-  }
+            body {
+                background-color: #FFFFFF;
+            }
+              .ui.menu .item img.logo {
+                  margin-right: 1.5em;
+              }
+              .main.container {
+                  margin-top: 5em;
+              }
 
-  #created-by {
-      margin-left: 20px;
-  }
+              .ui.main.container p:first-of-type {
+                  margin-top: 30px;
+              }
+              .wireframe {
+                  margin-top: 2em;
+              }
+              .ui.footer.segment {
+                  margin: 5em 0em 0em;
+              }
+
+              #created-by {
+                  margin-left: 20px;
+              }
+
+              #table-data {
+                  margin-top: 40px;
+              }
+
+              #insights-header {
+                  margin-top: 40px;
+              }
+
+              .ui.grid.centered {
+                  margin-top: 10px;
+              }
         </style>
 
     </head>
@@ -58,18 +73,17 @@ body {
             <p>Do you pay taxes? Do you give to charity? Do you use tax loopholes? Do you keep your money offshore? Can you properly manage your family's finances? Are you financially beholden to other people or entities?</p>
             <p>We hope the data elow will give you insight into these questions across past presidents and candidates so that you can better evaluate current and future candidates.</p>
         </div>
-        <br/>
-        <div class="ui container">
-            <table class="ui sortable fixed celled table">
+        <div id="table-data" class="ui container">
+            <table class="ui sortable celled table">
                 <thead>
                     <tr>
-                        <th class="">President / Candidate name</th>
-                        <th>Yars of data</th>
+                        <th class="">President /<br/> Candidate name</th>
+                        <th>Years of data</th>
                         <th>Charity rate - max</th>
                         <th>Charity rate - avg</th>
-                        <th>Effective tax rate</th>
-                        <th>Combined tax + charity rate</th>
-                        <th>Average income</th>
+                        <th>Effective <br/>tax rate</th>
+                        <th>Combined tax +<br/> charity rate</th>
+                        <th>Average <br/>income</th>
                         <th>Total charity</th>
                         <th>Total taxes paid</th>
                         <th>Total income</th>
@@ -90,7 +104,10 @@ body {
                     </tr>
                 </tbody>
             </table>
-            <h2 class="ui header centered">Insights</h2>
+            <h1 id="insights-header" class="ui horizontal divider header">
+                  <i class="industry icon"></i>
+                    Insights
+            </h1>
             <div class="ui grid centered">
                 <div class="two column row">
                     <div class="three wide column">
