@@ -33,12 +33,41 @@
                     })
                 ;
 
+                $('table#president-data th.average-income').data('sortBy', function(th, td, tablesort) {
+                    return td.text().replace('$','').replace(',','');
+                });
+
+                $('table#president-data th.total-charity').data('sortBy', function(th, td, tablesort) {
+                    return td.text().replace('$','').replace(',','');
+                });
+
+                $('table#president-data th.total-taxes-paid').data('sortBy', function(th, td, tablesort) {
+                    return td.text().replace('$','').replace(',','');
+                });
+
+                $('table#president-data th.total-income').data('sortBy', function(th, td, tablesort) {
+                    return td.text().replace('$','').replace(',','');
+                });
+
                 $('table#president-data').tablesort();
                 $('table#president-data').data('tablesort').sort($("th.effective-tax-rate"));
+
+                $('table#raw-data th.total-income').data('sortBy', function(th, td, tablesort) {
+                    return td.text().replace('$','').replace(',','');
+                });
+
+                $('table#raw-data th.total-tax').data('sortBy', function(th, td, tablesort) {
+                    return td.text().replace('$','').replace(',','');
+                });
+
+                $('table#raw-data th.gifts-to-charity').data('sortBy', function(th, td, tablesort) {
+                    return td.text().replace('$','').replace(',','');
+                });
 
                 $('table#raw-data').tablesort();
                 $('table#raw-data').data('tablesort').sort($("th.name"), 'asc');
                 $('table#raw-data').data('tablesort').sort($("th.name"), 'asc'); // erm not sure why this needed 
+
 
                 // thanks http://www.webpop.com/blog/2011/02/16/add-a-custom-twitter-button-to-your-website
                 $('button.twitter').click(function(event) {
@@ -148,10 +177,10 @@
                         <th>Charity rate - avg</th>
                         <th class="effective-tax-rate">Effective <br/>tax rate</th>
                         <th>Combined tax +<br/> charity rate</th>
-                        <th>Average <br/>income</th>
-                        <th>Total charity</th>
-                        <th>Total taxes paid</th>
-                        <th>Total income</th>
+                        <th class="average-income">Average <br/>income</th>
+                        <th class="total-charity">Total charity</th>
+                        <th class="total-taxes-paid">Total taxes paid</th>
+                        <th class="total-income">Total income</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -336,9 +365,9 @@
                         <th class="">Type</th>
                         <th class="">URL</th>
                         <th class="">Year</th>
-                        <th class="">Total income</th>
-                        <th class="">Total tax</th>
-                        <th class="">Effective <br/>tax rate</th>
+                        <th class="total-income">Total income</th>
+                        <th class="total-tax">Total tax</th>
+                        <th class="gifts-to-charity">Effective <br/>tax rate</th>
                         <th class="">Gifts <br/>to charity</th>
                         <th class="">Charity rate</th>
                         <th class="">Income <br/>bracket</th>
@@ -479,11 +508,11 @@
                     Raw data available at <a class="item" target="_onblank" href="http://taxhistory.org">TaxHistory.org</a>
                     <span id="created-by">
                         Created by
-                        <a class="item" target="_onblank" href="https://www.linkedin.com/in/davewhittemore">David Whittemore</a> &nbsp;&&nbsp;
-                        <a class="item" target="_onblank" href="https://www.linkedin.com/in/manish-sinha-9675b366">Manish Sinha</a>
+                        <a class="item" target="_onblank" href="https://twitter.com/dwhittemore">David Whittemore</a> &nbsp;&&nbsp;
+                        <a class="item" target="_onblank" href="https://twitter.com/manishsinhaha">Manish Sinha</a>
                     </span>
                     <span id="source-code">
-                        Source code available on
+                        Source available on
                         <a class="item" target="_onblank" href="https://github.com/dopeboy/presidential-tax-returns">github</a>
                     </span>
                 </div>
